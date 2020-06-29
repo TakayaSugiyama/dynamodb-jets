@@ -3,6 +3,15 @@ Jets.application.configure do
   config.mode = "html"
 
   config.prewarm.enable = true # default is true
+
+  config.iam_policy = [
+    Jets::Application.default_iam_policy,
+    {
+      action: ["dynamodb:*"],
+      effect: "Allow",
+      resource: "arn:aws:dynamodb:#{Jets.aws.region}:#{Jets.aws.account}:table/#{Jets.project_namespace}-*",
+    }
+  ]
   # config.prewarm.rate = '30 minutes' # default is '30 minutes'
   # config.prewarm.concurrency = 2 # default is 2
   # config.prewarm.public_ratio = 3 # default is 3
