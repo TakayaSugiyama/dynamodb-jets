@@ -107,6 +107,10 @@ GEM
     crass (1.0.6)
     diff-lcs (1.4.4)
     dotenv (2.7.6)
+    dynamoid (3.6.0)
+      activemodel (>= 4)
+      aws-sdk-dynamodb (~> 1.0)
+      concurrent-ruby (>= 1.0)
     dynomite (1.2.6)
       activesupport
       aws-sdk-dynamodb
@@ -235,6 +239,7 @@ PLATFORMS
 DEPENDENCIES
   byebug
   capybara
+  dynamoid
   dynomite
   jetpacker
   jets
