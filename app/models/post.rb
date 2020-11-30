@@ -1,12 +1,12 @@
-class Post < ApplicationItem
-  extend ActiveModel::Naming
-  include ActiveModel::Validations
+class Post
+  include Dynamoid::Document
+  has_many :comments
 
-  def persisted?
-    !self.id.nil?
-  end
-
-
-  column :id, :content, :created_at, :updated_at
+  field :id
+  field :content
+  field :created_at
+  field :updated_at
   validates :content, presence: true
 end
+
+
