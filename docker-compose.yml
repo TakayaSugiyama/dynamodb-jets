@@ -19,13 +19,3 @@ services:
       - dynamodb-local
     environment:
       DYNAMO_ENDPOINT: http://dynamodb-local:8000
-  jets:
-    build: .
-    container_name:  jets
-    tty: true
-    ports:
-      - "8888:8888"
-    volumes:
-      - .:/app
-    depends_on:
-      - dynamodb-local
