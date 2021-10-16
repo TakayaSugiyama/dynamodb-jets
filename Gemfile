@@ -7,9 +7,10 @@ gem "jetpacker"
 
 # Include mysql2 gem if you are using ActiveRecord, remove next line
 # and config/database.yml file if you are not
-gem "mysql2", "~> 0.5.2"
+gem "mysql2", "~> 0.5.0"
 
 gem "dynomite"
+gem "mimemagic", "~> 0.3.10"
 
 # development and test groups are not bundled as part of the deployment
 group :development, :test do
@@ -25,3 +26,5 @@ group :test do
   gem 'launchy'
   gem 'capybara'
 end
+
+gem "solargraph", "~> 0.44.0"

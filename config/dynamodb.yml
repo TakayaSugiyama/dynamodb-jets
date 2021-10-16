@@ -4,14 +4,7 @@
 
 development:
   table_namespace: <%= Jets.config.table_namespace %>
-  # More examples:
-  # table_namespace: demo-dev
-
-  endpoint: http://localhost:8000 # comment out if want to test with real dynamodb
-  # on AWS. You can also set the DYNAMODB_ENDPOINT environment variable.
-  # You can also are actually deploying a development environment is to
-  # change bin/server and export DYNAMODB_ENDPOINT=http://localhost:8000 at the top
-  # there.
+  endpoint: http://192.168.16.1
 
 test:
   # table_namespace: proj # do not include the env
